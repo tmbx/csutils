@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D3CAB77-329F-483B-883A-C8B2E7D9CC3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TbxUtils</RootNamespace>
+    <AssemblyName>TbxUtils</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SignKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseP|AnyCPU' ">
+    <OutputPath>bin\ReleaseP\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Misc\OtcRegistrySettings.cs" />
+    <Compile Include="Misc\AnpMsg.cs" />
+    <Compile Include="Misc\AnpTransport.cs" />
+    <Compile Include="Misc\Base.cs" />
+    <Compile Include="Misc\HttpQuery.cs" />
+    <Compile Include="Misc\KAnp.cs" />
+    <Compile Include="Misc\KfsUtils.cs" />
+    <Compile Include="Misc\KWakeupTimer.cs" />
+    <Compile Include="Misc\Logging.cs" />
+    <Compile Include="Misc\Oanp.cs" />
+    <Compile Include="Misc\OutlookDataObject.cs" />
+    <Compile Include="Misc\OutlookKws.cs" />
+    <Compile Include="Misc\RawProcess.cs" />
+    <Compile Include="Misc\SelectSocket.cs" />
+    <Compile Include="Misc\Syscalls.cs" />
+    <Compile Include="Misc\Thread.cs" />
+    <Compile Include="Misc\Tuple.cs" />
+    <Compile Include="Misc\WindowWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShellLib\FilterByExtension.cs" />
+    <Compile Include="ShellLib\IFolderFilter.cs" />
+    <Compile Include="ShellLib\IFolderFilterSite.cs" />
+    <Compile Include="ShellLib\IMalloc.cs" />
+    <Compile Include="ShellLib\IShellFolder.cs" />
+    <Compile Include="ShellLib\ShellAddRecent.cs" />
+    <Compile Include="ShellLib\ShellApi.cs" />
+    <Compile Include="ShellLib\ShellBrowseForFolderDialog.cs" />
+    <Compile Include="ShellLib\ShellExecute.cs" />
+    <Compile Include="ShellLib\ShellFileOperation.cs" />
+    <Compile Include="ShellLib\ShellFunctions.cs" />
+    <Compile Include="ShellLib\ShellGUIDs.cs" />
+    <Compile Include="UIControls\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIControls\ucAmSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControls\ucAmSettings.Designer.cs">
+      <DependentUpon>ucAmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInactivityMonitor\ApplicationMonitor.cs" />
+    <Compile Include="UserInactivityMonitor\ControlMonitor.cs" />
+    <Compile Include="UserInactivityMonitor\HookMonitor.cs" />
+    <Compile Include="UserInactivityMonitor\IInactivityMonitor.cs" />
+    <Compile Include="UserInactivityMonitor\LastInputMonitor.cs" />
+    <Compile Include="UserInactivityMonitor\MonitorBase.cs" />
+    <Compile Include="UserInactivityMonitor\MonitorCreator.cs" />
+    <Compile Include="UserInactivityMonitor\MonitorType.cs" />
+    <Compile Include="UserInactivityMonitor\User32.cs" />
+    <Compile Include="UserInactivityMonitor\Win32Hook.cs" />
+    <Compile Include="UserInactivityMonitor\Win32LastInputInfo.cs" />
+    <Compile Include="UserInactivityMonitor\Win32Message.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SignKey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControls\ucAmSettings.resx">
+      <DependentUpon>ucAmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
